@@ -182,7 +182,7 @@
             color: #333;
         }
 
-        /* --- MOBILE RESPONSIVE INTELLIGENCE --- */
+        /* --- MOBILE RESPONSIVE FIX (FORCE NAME TO TOP) --- */
         @media screen and (max-width: 768px) {
             .page {
                 width: 100%;
@@ -190,16 +190,20 @@
                 box-shadow: none;
                 flex-direction: column;
             }
+            /* Step 1: Force Sidebar to Bottom */
             .sidebar {
                 width: 100%;
                 box-sizing: border-box;
                 border-right: none;
-                border-bottom: 5px solid var(--primary-color);
+                border-top: 5px solid var(--primary-color);
+                order: 2; /* Shows SECOND on mobile */
             }
+            /* Step 2: Force Main Name Area to Top */
             .main {
                 width: 100%;
                 box-sizing: border-box;
                 padding: 20px;
+                order: 1; /* Shows FIRST on mobile */
             }
             .name { font-size: 28px; text-align: center; }
             .job-title { text-align: center; margin-bottom: 20px; }
