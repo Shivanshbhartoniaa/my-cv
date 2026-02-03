@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivansh Bhartonia - Professional Profile</title>
+    <meta name="viewport" content="width=1024"> <title>Shivansh Bhartonia - Professional Profile</title>
     <style>
         /* CORPORATE THEME SETTINGS */
         :root {
@@ -182,37 +181,7 @@
             color: #333;
         }
 
-        /* --- MOBILE RESPONSIVE FIX (FORCE NAME TO TOP) --- */
-        @media screen and (max-width: 768px) {
-            .page {
-                width: 100%;
-                margin: 0;
-                box-shadow: none;
-                flex-direction: column;
-            }
-            /* Step 1: Force Sidebar to Bottom */
-            .sidebar {
-                width: 100%;
-                box-sizing: border-box;
-                border-right: none;
-                border-top: 5px solid var(--primary-color);
-                order: 2; /* Shows SECOND on mobile */
-            }
-            /* Step 2: Force Main Name Area to Top */
-            .main {
-                width: 100%;
-                box-sizing: border-box;
-                padding: 20px;
-                order: 1; /* Shows FIRST on mobile */
-            }
-            .name { font-size: 28px; text-align: center; }
-            .job-title { text-align: center; margin-bottom: 20px; }
-            .header { text-align: center; }
-            .entry-top { flex-direction: column; }
-            .entry-sub { text-align: left; padding-left: 0; margin-bottom: 2px;}
-        }
-        
-        /* --- PRINT INTELLIGENCE --- */
+        /* --- PRINT SETTINGS --- */
         @media print {
             body { background: none; }
             .page { 
@@ -220,10 +189,7 @@
                 min-height: 297mm; 
                 margin: 0; 
                 box-shadow: none; 
-                flex-direction: row; 
             }
-            .sidebar { width: 34%; }
-            .main { width: 66%; }
         }
     </style>
 </head>
