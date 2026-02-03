@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivansh Bhartonia - Professional Profile</title>
+    <style>
+        /* CORPORATE THEME SETTINGS */
+        :root {
+            --primary-color: #002060; /* Deep Professional Navy */
+            --secondary-color: #444444; /* Dark Grey Text */
+            --accent-color: #f0f4f8; /* Very Light Grey Background */
+            --border-color: #d1d5db;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5; /* Web Background */
+            color: #333;
+            -webkit-print-color-adjust: exact;
+        }
+
+        /* PAGE CONTAINER */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            margin: 40px auto;
+            display: flex;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- LEFT SIDEBAR --- */
+        .sidebar {
+            width: 34%;
+            background-color: var(--accent-color);
+            padding: 30px 20px;
+            border-right: 1px solid var(--border-color);
+            color: #333;
+        }
+
+        .sidebar h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar h2:first-child { margin-top: 0; }
+
+        .sidebar-item { margin-bottom: 15px; }
+
+        .sidebar-title {
+            font-weight: bold;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .sidebar-sub {
+            font-size: 12px;
+            color: #555;
+            font-style: italic;
+        }
+
+        .sidebar-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-list li {
+            font-size: 12px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .sidebar-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* CONTACT SECTION */
+        .contact-group { margin-bottom: 25px; }
+        .contact-item {
+            font-size: 12px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-icon { margin-right: 8px; font-size: 14px; }
+        .contact-item a { text-decoration: none; color: #333; }
+
+        /* --- RIGHT MAIN CONTENT --- */
+        .main {
+            width: 66%;
+            padding: 30px 30px;
+        }
+
+        .header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .job-title {
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-top: 8px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-header {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            border-bottom: 1px solid #ccc;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            padding-bottom: 3px;
+            letter-spacing: 1px;
+        }
+
+        .entry { margin-bottom: 12px; }
+
+        .entry-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .entry-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .entry-sub {
+            font-size: 12px;
+            font-style: italic;
+            color: #666;
+            text-align: right; 
+            padding-left: 10px;
+        }
+
+        .entry-desc {
+            margin: 4px 0 0 0;
+            padding-left: 15px;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        .entry-desc li { margin-bottom: 3px; }
+
+        .objective-text {
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: justify;
+            color: #333;
+        }
+
+        /* --- MOBILE RESPONSIVE INTELLIGENCE --- */
+        @media screen and (max-width: 768px) {
+            .page {
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                box-sizing: border-box;
+                border-right: none;
+                border-bottom: 5px solid var(--primary-color);
+            }
+            .main {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 20px;
+            }
+            .name { font-size: 28px; text-align: center; }
+            .job-title { text-align: center; margin-bottom: 20px; }
+            .header { text-align: center; }
+            .entry-top { flex-direction: column; }
+            .entry-sub { text-align: left; padding-left: 0; margin-bottom: 2px;}
+        }
+        
+        /* --- PRINT INTELLIGENCE --- */
+        @media print {
+            body { background: none; }
+            .page { 
+                width: 210mm; 
+                min-height: 297mm; 
+                margin: 0; 
+                box-shadow: none; 
+                flex-direction: row; 
+            }
+            .sidebar { width: 34%; }
+            .main { width: 66%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        
+        <div class="sidebar">
+            <h2>Contact Details</h2>
+            <div class="contact-group">
+                <div class="contact-item"><span class="contact-icon">📞</span> 9953121199</div>
+                <div class="contact-item"><span class="contact-icon">📧</span> shivanshbhartonia@gmail.com</div>
+                <div class="contact-item"><span class="contact-icon">📍</span> Ghaziabad/Noida</div>
+                <div class="contact-item">
+                    <span class="contact-icon">🔗</span> 
+                    <a href="https://linkedin.com/in/shivanshbhartonia" target="_blank">linkedin.com/in/shivanshbhartonia</a>
+                </div>
+            </div>
+
+            <h2>Education</h2>
+            <div class="sidebar-item">
+                <span class="sidebar-title">Bachelor of Business Administration (BBA)</span>
+                <span class="sidebar-sub">Delhi Metropolitan Education (GGSIPU)</span>
+                <div style="font-size: 11px; margin-top: 2px;">Current: 3rd Semester</div>
+                <div style="font-size: 11px;">Marketing (Major) & Entrepreneurship (Minor)</div>
+            </div>
+            <div class="sidebar-item">
+                <span class="sidebar-title">Class XII (Commerce)</span>
+                <span class="sidebar-sub">DAV Public School</span>
+            </div>
+
+            <h2>Certifications & Badges</h2>
+            <ul class="sidebar-list">
+                <li>TCS iON Career Edge | TCS iON</li>
+                <li>Google Cloud Arcade Program (Multiple Badges Earned) | Google Cloud</li>
+                <li>Google Analytics Certified | Google</li>
+                <li>Oracle Certified AI Foundations Associate | Oracle University</li>
+                <li>Oracle Cloud Infrastructure 2025 Certified Foundations Associate | Oracle University</li>
+                <li>Master Power BI: Netflix Dashboard Project | Skillected</li>
+                <li>Ethical AI & Generative AI | Infosys Springboard</li>
+                <li>Agile Project Management | HP LIFE</li>
+                <li>Design Thinking & Startup Planning | IIM Indore E-Cell</li>
+                <li>Apple Ads Certified | Apple</li>
+            </ul>
+
+            <h2>Workshops & Seminars</h2>
+            <ul class="sidebar-list">
+                <li>Microsoft Season of AI - MCP'25 (Gurugram)</li>
+                <li>Data Leadership World Summit 1.0</li>
+                <li>Emotional Intelligence Workshop</li>
+                <li>Professional Networking (LinkedIn)</li>
+                <li>People & Soft Skills for Professional Success</li>
+            </ul>
+
+            <h2>Extracurricular & Interests</h2>
+            <ul class="sidebar-list">
+                <li><strong>Sports:</strong> Participated and volunteered in LAKSHAYA 2025 (In-house Sports Fest).</li>
+                <li><strong>AI Research:</strong> Actively learning about LLMs, Agents, and Automation.</li>
+                <li><strong>Coding:</strong> Writing Python scripts for personal automation.</li>
+                <li><strong>Tech Quizzing:</strong> National-level technical quizzes.</li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <h1 class="name">Shivansh Bhartonia</h1>
+                <div class="job-title">BBA Student | Aspiring AI Expert | Data Analyst</div>
+            </div>
+
+            <div class="section-header">Objective</div>
+            <p class="objective-text">
+                A future-focused BBA student with a deep passion for <strong>Artificial Intelligence</strong> and <strong>Data Analytics</strong>. Committed to bridging the gap between business strategy and technical innovation to solve real-world problems. My long-term goal is to grow into an executive leadership role <strong>(C-suite/CEO)</strong> at a major, technology-driven company by mastering AI applications in business.
+            </p>
+
+            <div class="section-header">Technical Projects (GitHub Portfolio)</div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">JARVIS AI Assistant (Python)</span>
+                </div>
+                <ul class="entry-desc">
+                    <li>Developed a voice-activated personal assistant capable of automating tasks using Python and Speech Recognition libraries.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Netflix Data Analysis Dashboard (Power BI)</span>
+                </div>
+                <ul class="entry-desc">
+                    <li>Created an interactive dashboard to visualize content trends and viewer ratings.</li>
+                </ul>
+            </div>
+
+            <div class="section-header">Virtual Internships (Job Simulations)</div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Data Analytics & GenAI Job Simulation</span>
+                    <span class="entry-sub">Tata Group (via Forage)</span>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Cybersecurity & Data Analytics Job Simulation</span>
+                    <span class="entry-sub">Deloitte (via Forage)</span>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Cybersecurity Analyst Job Simulation</span>
+                    <span class="entry-sub">Tata Group (via Forage)</span>
+                </div>
+            </div>
+
+            <div class="section-header">Campus Leadership</div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Class Representative (CR)</span>
+                </div>
+                <ul class="entry-desc">
+                    <li>Selected to lead the batch for one full academic year; acted as a liaison between faculty and students.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Student Volunteer (LOR Recipient): 'Be Your Own Boss' (BYOB)</span>
+                </div>
+                <ul class="entry-desc">
+                    <li>Led a brand collaboration with <strong>Gillette & Whisper</strong> for a personality development program.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Organizer: Oracle Marketing Club (DME College)</span>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Member: Cyber Cell & Research Cell</span>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Event Coordinator</span>
+                </div>
+                <ul class="entry-desc">
+                    <li>Successfully organized/volunteered for multiple key events including the <strong>Student Conclave on Sustainable Choices</strong>, <strong>Summer School Valedictory Ceremony</strong>, and <strong>Leadership & Mental Well-being Workshop</strong>.</li>
+                </ul>
+            </div>
+
+            <div class="section-header">Honors & Achievements</div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Global Rank 3 (Winner): Rapid Fire Quiz</span>
+                    <span class="entry-sub">Data Leadership World Summit 1.0</span>
+                </div>
+                <ul class="entry-desc">
+                    <li>Rewards: Earned an Offline Pass for the upcoming event and Official Swags.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-top">
+                    <span class="entry-title">Top 5 Winner: Tech Quiz</span>
+                    <span class="entry-sub">Microsoft Season of AI</span>
+                </div>
+                <ul class="entry-desc">
+                    <li>Rewards: Won Microsoft Mug and Pen.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <ul class="entry-desc">
+                    <li><strong>Gold Medal:</strong> International Commerce Olympiad (Class 12).</li>
+                    <li><strong>Award Winner (COA):</strong> "Best Dressed" in Professional Image Management.</li>
+                    <li><strong>Participant:</strong> Aspire Leaders Program (Harvard Founded) - Completed Module 1 & 2.</li>
+                </ul>
+            </div>
+
+            <div class="section-header">Industrial Visits & Social Outreach</div>
+            <div class="entry">
+                <ul class="entry-desc">
+                    <li><strong>Aaj Tak & India TV Studios:</strong> Gained media exposure by witnessing live newsroom operations and attending the national debate 'War and Politics'.</li>
+                    <li><strong>Haier Industrial Plant:</strong> Corporate visit to observe advanced manufacturing and supply chain processes.</li>
+                    <li><strong>New Delhi World Book Fair:</strong> Academic excursion to analyze B2C marketing strategies.</li>
+                    <li><strong>Nirbhed Foundation (NSS Visit):</strong> Engaged with social issues and community service initiatives.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
